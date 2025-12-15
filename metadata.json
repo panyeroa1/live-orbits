@@ -1,0 +1,8 @@
+{
+  "name": "Orbit Meeting Sandbox",
+  "description": "An interactive sandbox for Gemini's native audio and function calling.",
+  "requestFramePermissions": [
+    "microphone",
+    "camera"
+  ]
+}
