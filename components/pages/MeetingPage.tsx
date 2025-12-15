@@ -5,7 +5,7 @@ import { useSettings } from '@/lib/state';
 import { SUPPORTED_LANGUAGES } from '@/lib/constants';
 import { LiveAPIProvider } from '@/contexts/LiveAPIContext';
 
-const API_KEY = process.env.GEMINI_API_KEY as string;
+const API_KEY = import.meta.env.VITE_GEMINI_API_KEY as string;
 
 export default function MeetingPage() {
   const { meetingId } = useParams();
