@@ -36,20 +36,24 @@ export const useSettings = create<{
   voice: string;
   language: string;
   userId: string;
+  sessionId: string;
   setSystemPrompt: (prompt: string) => void;
   setModel: (model: string) => void;
   setVoice: (voice: string) => void;
   setLanguage: (language: string) => void;
+  setSessionId: (sessionId: string) => void;
 }>(set => ({
   systemPrompt: `You are Orbitz ReadAloud Translator. Your ONLY job is to output a speakable translation that will be read aloud.`,
   model: DEFAULT_LIVE_API_MODEL,
   voice: DEFAULT_VOICE,
   language: 'English',
   userId: crypto.randomUUID(), // Unique ID for this client instance
+  sessionId: 'demo-session-v1', // Default
   setSystemPrompt: prompt => set({ systemPrompt: prompt }),
   setModel: model => set({ model }),
   setVoice: voice => set({ voice }),
   setLanguage: language => set({ language }),
+  setSessionId: sessionId => set({ sessionId }),
 }));
 
 /**

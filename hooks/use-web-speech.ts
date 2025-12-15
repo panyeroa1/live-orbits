@@ -86,7 +86,7 @@ export function useWebSpeech(isMicOn: boolean) {
 
         // CHANGED: Save to Supabase for translation instead of sending directly to Gemini
         // This prevents audio feedback loops - Gemini will receive text prompts from Supabase
-        const { language, userId } = useSettings.getState();
+        const { language, userId, sessionId } = useSettings.getState();
         const targetLangConfig = SUPPORTED_LANGUAGES.find(l => l.label === language) || SUPPORTED_LANGUAGES[0];
         
         saveTranscriptForTranslation(finalTranscript, {
@@ -95,7 +95,7 @@ export function useWebSpeech(isMicOn: boolean) {
           target_locale: targetLangConfig.locale,
           speaker_style: 'neutral, clear',
           speaker_id: userId,
-          session_id: 'demo-session-v1', // Should match DEFAULT_SESSION_ID
+          session_id: sessionId,
         });
         
         // Keep log for history

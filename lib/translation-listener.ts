@@ -23,15 +23,16 @@ export function useTranslationListener() {
 
     // Subscribe to new transcripts for the current session
     // This allows ALL users in the session to hear the translation
+    const { sessionId } = useSettings.getState();
     const channel = supabase
-      .channel(`session_${DEFAULT_SESSION_ID}`)
+      .channel(`session_${sessionId}`)
       .on(
         'postgres_changes',
         {
           event: 'INSERT',
           schema: 'public',
           table: 'transcripts',
-          filter: `session_id=eq.${DEFAULT_SESSION_ID}`,
+          filter: `session_id=eq.${sessionId}`,
         },
         async (payload) => {
           console.log('New transcript detected in session:', payload);
