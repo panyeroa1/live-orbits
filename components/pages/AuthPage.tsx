@@ -77,8 +77,8 @@ export default function AuthPage() {
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-[-20%] left-[-10%] w-[60vw] h-[60vw] bg-gradient-to-br from-[#66E6FF]/20 to-[#8A7CFF]/20 rounded-full blur-[140px] animate-pulse"></div>
-        <div className="absolute bottom-[-20%] right-[-10%] w-[60vw] h-[60vw] bg-gradient-to-tl from-[#8A7CFF]/20 to-[#66E6FF]/20 rounded-full blur-[140px] animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-[40%] left-[50%] w-[40vw] h-[40vw] bg-[#66E6FF]/10 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-[-20%] right-[-10%] w-[60vw] h-[60vw] bg-gradient-to-tl from-[#8A7CFF]/20 to-[#66E6FF]/20 rounded-full blur-[140px] animate-pulse animation-delay-1s"></div>
+        <div className="absolute top-[40%] left-[50%] w-[40vw] h-[40vw] bg-[#66E6FF]/10 rounded-full blur-[100px] animate-pulse animation-delay-2s"></div>
         
         {/* Noise texture overlay */}
         <div className="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxwYXRoIGQ9Ik0wIDBoMzAwdjMwMEgweiIgZmlsdGVyPSJ1cmwoI2EpIiBvcGFjaXR5PSIuMDUiLz48L3N2Zz4=')]"></div>
